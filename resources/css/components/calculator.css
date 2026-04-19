@@ -1,0 +1,46 @@
+/* ========== КАЛЬКУЛЯТОР УСЛУГ ========== */
+
+.calc-option input:checked + span {
+    border-color: #ff1a2a;
+    background: rgba(255, 26, 42, 0.1);
+}
+
+.calc-option span {
+    transition: all 0.3s ease;
+}
+
+/* Стили для ползунка */
+input[type="range"] {
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 4px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff1a2a;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 26, 42, 0.5);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Чекбоксы */
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Анимация для цены */
+#totalPrice {
+    transition: all 0.2s ease;
+}

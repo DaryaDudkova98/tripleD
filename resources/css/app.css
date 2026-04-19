@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import 'base.css';
+@import 'animations.css';
+@import 'components/skills.css';
+@import 'components/flip-cards.css';
+@import 'components/calculator.css';
+@import 'components/scroll-reveal.css';
+@import 'components/back-to-top.css';

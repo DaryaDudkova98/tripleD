@@ -1,0 +1,201 @@
+/* ========== БЕГУЩАЯ СТРОКА (SKILLS) ========== */
+
+.skills-section {
+    position: relative;
+}
+
+.skills-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Левое обрамление */
+.skills-border-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff1a2a, #51080d);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 26, 42, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-border-left::before {
+    content: "❮";
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Правое обрамление */
+.skills-border-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff1a2a, #51080d);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 26, 42, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-border-right::before {
+    content: "❯";
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Анимация для обрамления при наведении */
+.skills-border-left,
+.skills-border-right {
+    transition: all 0.3s ease;
+}
+
+.skills-wrapper:hover .skills-border-left,
+.skills-wrapper:hover .skills-border-right {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 26, 42, 0.5);
+}
+
+/* Контейнер бегущей строки */
+.marquee-container {
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    cursor: grab;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 60px;
+    padding: 8px 0;
+    user-select: none;
+}
+
+.marquee-container:active {
+    cursor: grabbing;
+}
+
+.marquee-container.dragging {
+    cursor: grabbing;
+}
+
+.marquee-container.dragging .marquee-track {
+    animation-play-state: paused !important;
+}
+
+.marquee-track {
+    display: flex;
+    width: fit-content;
+    gap: 24px;
+}
+
+/* Анимация бегущей строки */
+@keyframes marquee-right {
+    0% {
+        transform: translateX(-33.33%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-marquee-right {
+    animation: marquee-right 30s linear infinite;
+}
+
+/* Остановка при наведении */
+.marquee-container:hover .animate-marquee-right {
+    animation-play-state: paused;
+}
+
+/* Стиль тега навыка */
+.skill-tag {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #1f1c23, #19171b);
+    border: 1px solid rgba(255, 26, 42, 0.2);
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e5e5e5;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.skill-tag:hover {
+    border-color: #ff1a2a;
+    color: #ff1a2a;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2a252f, #1f1c23);
+    box-shadow: 0 0 15px rgba(255, 26, 42, 0.2);
+}
+
+/* Статичные теги навыков */
+.skill-tag-static {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(255, 26, 42, 0.1);
+    border: 1px solid rgba(255, 26, 42, 0.2);
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #e5e5e5;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.skill-tag-static:hover {
+    background: rgba(255, 26, 42, 0.2);
+    border-color: #ff1a2a;
+    color: #ff1a2a;
+    transform: translateY(-2px);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .skills-border-left,
+    .skills-border-right {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .skills-border-left::before,
+    .skills-border-right::before {
+        font-size: 16px;
+    }
+    
+    .skill-tag {
+        padding: 5px 14px;
+        font-size: 12px;
+    }
+    
+    .marquee-track {
+        gap: 16px;
+    }
+    
+    .animate-marquee-right {
+        animation-duration: 20s;
+    }
+}

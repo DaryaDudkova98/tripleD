@@ -1,0 +1,102 @@
+/* ========== 3D FLIP CARDS ========== */
+
+.perspective {
+    perspective: 1000px;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+.group:hover .group-hover\:rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+/* Улучшенная анимация для карточек */
+.flip-card {
+    transition: all 0.3s ease;
+}
+
+.flip-card:hover {
+    transform: translateY(-5px);
+}
+
+.flip-card-inner {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.flip-card-front img,
+.flip-card-back {
+    transition: all 0.3s ease;
+}
+
+/* Стили для задней стороны */
+.flip-card-back {
+    background: linear-gradient(135deg, #1f1c23, #19171b);
+    backdrop-filter: blur(10px);
+}
+
+/* Технологические теги */
+.tech-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(255, 26, 42, 0.1);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #ff1a2a;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(255, 26, 42, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .flip-card {
+        height: 320px;
+    }
+    
+    .flip-card-back {
+        padding: 20px;
+    }
+    
+    .flip-card-back h3 {
+        font-size: 18px;
+    }
+    
+    .flip-card-back p {
+        font-size: 13px;
+    }
+}
+
+/* Отключение 3D эффекта на тач-устройствах */
+@media (hover: none) {
+    .flip-card-inner {
+        transform-style: flat;
+    }
+    
+    .group:hover .group-hover\:rotate-y-180 {
+        transform: rotateY(0deg);
+    }
+    
+    .flip-card-back {
+        display: none;
+    }
+    
+    .flip-card-front {
+        position: relative;
+    }
+}
