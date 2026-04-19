@@ -3,6 +3,7 @@ import { initMarquee } from './modules/marquee';
 import { initFlipCards } from './modules/flipCards';
 import { initScrollReveal } from './modules/scrollReveal';
 import { initBackToTop } from './modules/backToTop';
+import { initMobileMenu } from './modules/mobileMenu';
 
 // Инициализация всех модулей при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initFlipCards();    // 3D карточки для мобильных
     initScrollReveal(); // Анимации при скролле
     initBackToTop();    // Кнопка "Наверх"
+    initMobileMenu();   // Бургер-меню
 });
