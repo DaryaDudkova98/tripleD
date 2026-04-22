@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Политика конфиденциальности | tripleD</title>
     
-    <!-- Подключаем Tailwind CSS через Vite (или ваш способ) -->
+    <!-- Подключаем Tailwind CSS через Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
-    <!-- Если Vite не используется, подключите CSS напрямую -->
-    <!-- <link href="/css/app.css" rel="stylesheet"> -->
     
     <style>
         /* Дополнительные стили на случай, если Tailwind не подгрузился */

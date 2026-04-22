@@ -1,4 +1,4 @@
-<!-- Секция контактов минималистичная -->
+<!-- Секция контактов -->
 <section id="contacts" class="contacts-section py-16 md:py-24">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">

@@ -136,7 +136,7 @@
     </div>
 </section>
 
-<!-- Бегущая строка с навыками (оставляем как есть) -->
+<!-- Бегущая строка с навыками -->
 <section class="skills-section py-12">
     <div class="skills-wrapper relative">
         <!-- Обрамление слева -->
@@ -148,7 +148,7 @@
         <!-- Бегущая строка -->
         <div class="marquee-container relative overflow-hidden group" data-direction="right" id="marqueeContainer">
             <div class="marquee-track flex items-center gap-6 py-3 animate-marquee-right" id="marqueeTrack">
-                <!-- Навыки (повторены 3 раза для идеальной бесконечности) -->
+                <!-- Навыки (повторены 3 раза для бесконечности) -->
                 <span class="skill-tag">Laravel</span>
                 <span class="skill-tag">Symfony</span>
                 <span class="skill-tag">Tailwind CSS</span>

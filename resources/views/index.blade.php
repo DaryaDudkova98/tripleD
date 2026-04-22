@@ -8,6 +8,5 @@
         <h1 class="text-4xl font-bold text-center">
             Создаём лендинги, которые продают
         </h1>
-        <!-- Остальной контент -->
     </div>
 @endsection

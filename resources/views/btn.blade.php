@@ -3,6 +3,4 @@
     <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
     </svg>
-    <!-- Маленькая пульсирующая точка -->
-    <span class="absolute -top-1 -right-1 w-2 h-2 bg-[#ff1a2a] rounded-full animate-pulse"></span>
 </button>

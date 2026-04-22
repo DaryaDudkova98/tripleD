@@ -9,7 +9,7 @@
             <!-- Левая колонка с контентом -->
             <div class="hero-content space-y-6 animate-fade-in-left">
                 
-                <!-- Бейдж начинающего специалиста -->
+                <!-- Бейдж -->
                 <div class="inline-block px-4 py-1 rounded-full bg-[#ff1a2a]/20 border border-[#ff1a2a]/30 w-fit">
                     <span class="text-[#ff1a2a] text-sm font-medium">Начинающий веб-разработчик</span>
                 </div>
@@ -26,7 +26,7 @@
                 </p>
                 
                 <div class="flex flex-wrap gap-4 pt-4 animate-fade-in-up animation-delay-400">
-                    <a href="#portfolio" 
+                    <a href="#projects" 
                        class="group relative bg-gradient-to-r from-[#ff1a2a] to-[#51080d] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 overflow-hidden
                               shadow-[0_0_10px_rgba(255,26,42,0.3)] hover:shadow-[0_0_25px_rgba(255,26,42,0.6)] hover:scale-105">
                         <span class="absolute inset-0 bg-gradient-to-r from-[#ff1a2a] to-[#51080d] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></span>

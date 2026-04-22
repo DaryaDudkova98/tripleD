@@ -20,7 +20,7 @@ body {
     font-feature-settings: "ss02" on, "ss03" on, "cv01" on, "cv02" on;
 }
 
-/* Улучшенный скроллбар */
+/* Скроллбар */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -45,7 +45,6 @@ body {
     min-height: 100dvh;
 }
 
-/* Улучшенные transition */
 a, button {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

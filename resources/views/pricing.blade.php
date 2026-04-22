@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     
-                    <!-- Привлекательный баннер -->
+                    <!-- Баннер -->
                     <div class="mt-4 p-4 rounded-lg bg-gradient-to-r from-[#ff1a2a]/15 to-[#51080d]/15 border border-[#ff1a2a]/30 text-center">
                         <p class="text-[#ff1a2a] text-sm font-medium mb-2">Первым 5 клиентам — особые условия!</p>
                         <p class="text-gray-400 text-xs">Бесплатная консультация и помощь с хостингом</p>
@@ -231,7 +231,7 @@
 </section>
 
 <script>
-// Калькулятор стоимости (упрощённая версия без количества блоков)
+// Калькулятор стоимости
 document.addEventListener('DOMContentLoaded', () => {
     const typeRadios = document.querySelectorAll('input[name="type"]');
     const checkboxes = document.querySelectorAll('input[type="checkbox"][data-price]');
